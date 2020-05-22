@@ -1,0 +1,14 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Messages extends Model
+{
+    protected $table = 'messages';
+
+    public function messagesUser(){
+        return $this->belongsTo('App\User');
+    }
+}
